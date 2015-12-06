@@ -1,0 +1,5 @@
+parent: null
+package: main
+import:
+- package: github.com/erbridge/gotwit
+  version: 67358ff342fe317498dd1d76bc6bc190a71a123d

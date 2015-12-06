@@ -1,0 +1,39 @@
+{
+    "words": [
+        "clack",
+        "clock",
+        "crack",
+        "cracker",
+        "crackle",
+        "cratch",
+        "crick",
+        "crotch",
+        "crunch",
+        "plock",
+        "pop",
+        "popple",
+        "scrunch",
+        "snap"
+    ],
+    "prefixes": {
+        "": [
+            "ker"
+        ],
+        "c": [
+            "c"
+        ],
+        "cr": [
+            "cr"
+        ],
+        "sc": [
+            "s",
+            "scr"
+        ],
+        "p": [
+            "p"
+        ],
+        "pl": [
+            "pl"
+        ]
+    }
+}
