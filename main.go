@@ -39,8 +39,39 @@ func createTweetText(c corpus) (text string) {
 
 	words := make([]string, count)
 
+	n := rand.Float32()
+
 	for i := 0; i < count; i++ {
-		word := c.Words[rand.Intn(len(c.Words))]
+		letters := make([]string, 0)
+
+		for _, r := range c.Words[rand.Intn(len(c.Words))] {
+			limit := 1
+
+			if r == 's' || r == 'k' || r == 'p' || r == 'n' || r == 'a' || r == 'i' || r == 'u' {
+				n += rand.Float32() / 10
+
+				if n > 1 {
+					n = 0
+				}
+
+				if n > 0.9 {
+					limit = 4
+					n = rand.Float32() / 4
+				} else if n > 0.75 {
+					limit = 3
+					n = rand.Float32() / 3
+				} else if n > 0.6 {
+					limit = 2
+					n = rand.Float32() / 2
+				}
+			}
+
+			for i := 0; i < limit; i++ {
+				letters = append(letters, string(r))
+			}
+		}
+
+		word := strings.Join(letters, "")
 
 		index := rand.Intn(len(c.Prefixes))
 
