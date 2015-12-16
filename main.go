@@ -101,10 +101,6 @@ func main() {
 		if err = b.Start(); err != nil {
 			panic(err)
 		}
-
-		if err = b.Stop(); err != nil {
-			panic(err)
-		}
 	}()
 
 	rand.Seed(time.Now().UnixNano())
@@ -113,12 +109,7 @@ func main() {
 
 	b.Post(createTweetText(c), false)
 
-	ticker := time.NewTicker(time.Hour)
-	defer ticker.Stop()
-
-	for range ticker.C {
-		tweet = createTweetText(c)
-
-		b.Post(tweet, false)
+	if err = b.Stop(); err != nil {
+		panic(err)
 	}
 }

@@ -1,1 +1,1 @@
-worker: elbownoises
+web: elbownoises
