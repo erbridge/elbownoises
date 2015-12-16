@@ -102,7 +102,9 @@ func main() {
 
 	rand.Seed(time.Now().UnixNano())
 
-	ticker := time.NewTicker(1 * time.Hour)
+	b.Post(createTweetText(c), false)
+
+	ticker := time.NewTicker(time.Hour)
 	defer ticker.Stop()
 
 	done := make(chan bool)
