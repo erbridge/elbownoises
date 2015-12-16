@@ -134,9 +134,33 @@ func main() {
 		}
 	}()
 
-	rand.Seed(time.Now().UnixNano())
+	now := time.Now()
+
+	rand.Seed(now.UnixNano())
+
+	next := time.Date(
+		now.Year(),
+		now.Month(),
+		now.Day(),
+		now.Hour()+1,
+		now.Minute(),
+		now.Second(),
+		now.Nanosecond(),
+		now.Location(),
+	)
+
+	time.Sleep(next.Sub(now))
 
 	tweet := createTweetText(c)
 
 	b.Post(tweet, false)
+
+	ticker := time.NewTicker(time.Hour)
+	defer ticker.Stop()
+
+	for range ticker.C {
+		tweet = createTweetText(c)
+
+		b.Post(tweet, false)
+	}
 }
