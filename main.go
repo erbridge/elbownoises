@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"math/rand"
 	"os"
 	"strings"
@@ -107,6 +108,14 @@ func createTweetText(c corpus) (text string) {
 	return
 }
 
+func postTweet(b gotwit.Bot, c corpus) {
+	tweet := createTweetText(c)
+
+	fmt.Println("Posting:", tweet)
+
+	b.Post(tweet, false)
+}
+
 func main() {
 	var (
 		con twitter.ConsumerConfig
@@ -149,18 +158,18 @@ func main() {
 		now.Location(),
 	)
 
-	time.Sleep(next.Sub(now))
+	sleep := next.Sub(now)
 
-	tweet := createTweetText(c)
+	fmt.Printf("%v until first tweet", next.Sub(now))
 
-	b.Post(tweet, false)
+	time.Sleep(sleep)
+
+	postTweet(b, c)
 
 	ticker := time.NewTicker(time.Hour)
 	defer ticker.Stop()
 
 	for range ticker.C {
-		tweet = createTweetText(c)
-
-		b.Post(tweet, false)
+		postTweet(b, c)
 	}
 }
