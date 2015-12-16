@@ -107,7 +107,7 @@ func main() {
 
 	tweet := createTweetText(c)
 
-	b.Post(createTweetText(c), false)
+	b.Post(tweet, false)
 
 	if err = b.Stop(); err != nil {
 		panic(err)
