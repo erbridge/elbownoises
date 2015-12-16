@@ -152,7 +152,7 @@ func main() {
 		now.Month(),
 		now.Day(),
 		now.Hour()+1,
-		00,
+		0,
 		0,
 		0,
 		now.Location(),
@@ -160,7 +160,7 @@ func main() {
 
 	sleep := next.Sub(now)
 
-	fmt.Printf("%v until first tweet\n", next.Sub(now))
+	fmt.Printf("%v until first tweet\n", sleep)
 
 	time.Sleep(sleep)
 
