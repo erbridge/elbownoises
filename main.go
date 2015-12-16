@@ -143,9 +143,9 @@ func main() {
 		now.Month(),
 		now.Day(),
 		now.Hour()+1,
-		now.Minute(),
-		now.Second(),
-		now.Nanosecond(),
+		15,
+		0,
+		0,
 		now.Location(),
 	)
 
