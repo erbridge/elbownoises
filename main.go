@@ -160,7 +160,7 @@ func main() {
 
 	sleep := next.Sub(now)
 
-	fmt.Printf("%v until first tweet", next.Sub(now))
+	fmt.Printf("%v until first tweet\n", next.Sub(now))
 
 	time.Sleep(sleep)
 
