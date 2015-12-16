@@ -1,0 +1,23 @@
+hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+updated: 2015-12-16T01:46:33.632365106Z
+imports:
+- name: appengine
+  version: ""
+  repo: https://appengine
+- name: github.com/azr/backoff
+  version: dd6e01f857f8c114b40c6ce808502a87c58c6816
+- name: github.com/ChimeraCoder/anaconda
+  version: 4b2bf11c3f29812ce4507e50d43864e90f0499aa
+- name: github.com/ChimeraCoder/tokenbucket
+  version: c5a927568de7aad8a58127d80bcd36ca4e71e454
+- name: github.com/dustin/go-jsonpointer
+  version: 2efc9fef1d9421a8d252a32e20beb10cecd2bbca
+- name: github.com/dustin/gojson
+  version: af16e0e771e2ed110f2785564ae33931de8829e4
+- name: github.com/erbridge/gotwit
+  version: d124cf475fae2028f9b11d33c3b6e28792c937b0
+  subpackages:
+  - twitter
+- name: github.com/garyburd/go-oauth
+  version: 3131beb69b81ff119923bdefbf029318f1f53794
+devImports: []
