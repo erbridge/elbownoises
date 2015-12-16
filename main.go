@@ -97,26 +97,28 @@ func main() {
 		panic(err)
 	}
 
-	b.Start()
-	defer b.Stop()
+	go func() {
+		if err = b.Start(); err != nil {
+			panic(err)
+		}
+
+		if err = b.Stop(); err != nil {
+			panic(err)
+		}
+	}()
 
 	rand.Seed(time.Now().UnixNano())
+
+	tweet := createTweetText(c)
 
 	b.Post(createTweetText(c), false)
 
 	ticker := time.NewTicker(time.Hour)
 	defer ticker.Stop()
 
-	done := make(chan bool)
-	defer close(done)
+	for range ticker.C {
+		tweet = createTweetText(c)
 
-	go func() {
-		for range ticker.C {
-			b.Post(createTweetText(c), false)
-		}
-
-		done <- true
-	}()
-
-	<-done
+		b.Post(tweet, false)
+	}
 }
