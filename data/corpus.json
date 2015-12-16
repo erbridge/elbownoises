@@ -1,33 +1,53 @@
 {
     "words": [
-        "clack",
-        "clock",
-        "crack",
-        "cracker",
-        "crackle",
-        "cratch",
-        "crick",
-        "crotch",
-        "crunch",
-        "plock",
+        "klak",
+        "klik",
+        "krak",
+        "krak",
+        "krak",
+        "krik",
+        "krek",
+        "krunch",
+        "krunch",
+        "krunch",
+        "plok",
         "pop",
-        "popple",
-        "scrunch",
-        "snap"
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "pop",
+        "skrak",
+        "skrok",
+        "skrunch",
+        "skrunch",
+        "skrunch",
+        "snak",
+        "snik",
+        "snap",
+        "snap",
+        "snap",
+        "snap",
+        "snap",
+        "snip",
+        "stak",
+        "stik",
+        "stok"
     ],
     "prefixes": {
         "": [
             "ker"
         ],
         "c": [
-            "c"
+            "k"
         ],
-        "cr": [
-            "cr"
+        "kr": [
+            "kr"
         ],
-        "sc": [
+        "sk": [
             "s",
-            "scr"
+            "sk"
         ],
         "p": [
             "p"
