@@ -108,8 +108,4 @@ func main() {
 	tweet := createTweetText(c)
 
 	b.Post(tweet, false)
-
-	if err = b.Stop(); err != nil {
-		panic(err)
-	}
 }
