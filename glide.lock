@@ -1,5 +1,5 @@
 hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-updated: 2015-12-16T05:36:58.072399079Z
+updated: 2015-12-16T09:33:00.774026428Z
 imports:
 - name: appengine
   version: ""
@@ -15,7 +15,7 @@ imports:
 - name: github.com/dustin/gojson
   version: af16e0e771e2ed110f2785564ae33931de8829e4
 - name: github.com/erbridge/gotwit
-  version: 82343d94991a45a5037c277ae9a64bbda498e47b
+  version: 10fbf1741770b0ab424e408abc56e9421e9cd221
   subpackages:
   - twitter
 - name: github.com/garyburd/go-oauth
