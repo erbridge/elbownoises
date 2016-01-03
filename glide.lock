@@ -1,23 +1,40 @@
-hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-updated: 2015-12-16T09:33:00.774026428Z
+hash: 10b67414dc8b89c253fc4a5e530c75448aff8f0f81a1346d81e6637b7be628cf
+updated: 2016-01-03T23:42:04.362742563Z
 imports:
 - name: appengine
   version: ""
   repo: https://appengine
+- name: appengine/datastore
+  version: ""
+  repo: https://appengine/datastore
+- name: appengine/memcache
+  version: ""
+  repo: https://appengine/memcache
+- name: appengine/urlfetch
+  version: ""
+  repo: https://appengine/urlfetch
+- name: appengine/user
+  version: ""
+  repo: https://appengine/user
 - name: github.com/azr/backoff
   version: dd6e01f857f8c114b40c6ce808502a87c58c6816
+  repo: https://github.com/azr/backoff
 - name: github.com/ChimeraCoder/anaconda
   version: aa628ec9b414f6a2d88834a40e3b2bbef4dbdf1b
 - name: github.com/ChimeraCoder/tokenbucket
   version: c5a927568de7aad8a58127d80bcd36ca4e71e454
+  repo: https://github.com/ChimeraCoder/tokenbucket
 - name: github.com/dustin/go-jsonpointer
   version: 2efc9fef1d9421a8d252a32e20beb10cecd2bbca
+  repo: https://github.com/dustin/go-jsonpointer
 - name: github.com/dustin/gojson
   version: af16e0e771e2ed110f2785564ae33931de8829e4
+  repo: https://github.com/dustin/gojson
 - name: github.com/erbridge/gotwit
-  version: 10fbf1741770b0ab424e408abc56e9421e9cd221
+  version: a2aec6f3831738982be413535e81af5c6ca57b3b
   subpackages:
   - twitter
 - name: github.com/garyburd/go-oauth
   version: 3131beb69b81ff119923bdefbf029318f1f53794
+  repo: https://github.com/garyburd/go-oauth
 devImports: []

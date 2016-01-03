@@ -131,17 +131,15 @@ func main() {
 
 	b := gotwit.NewBot("elbownoises", con, acc)
 
+	if err := b.Start(); err != nil {
+		panic(err)
+	}
+
 	c, err := getCorpus()
 
 	if err != nil {
 		panic(err)
 	}
-
-	go func() {
-		if err = b.Start(); err != nil {
-			panic(err)
-		}
-	}()
 
 	now := time.Now()
 
